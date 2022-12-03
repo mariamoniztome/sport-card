@@ -3,10 +3,16 @@ const ProductHeader = (props) => {
     return ( 
         <div className="card-header">
         <div className="brand">
-            <img src={props.brandLogo} alt={props['brandName']}/> 
+            { props.brandLogo ? (
+                <img 
+                src={props.brandLogo} 
+                alt={props['brandName']}
+                /> 
+            ) : null }
+        
         </div>
         <div className="price">
-            <span>{props.brandPrice.toFixed()}€</span>
+            <span>{props.brandPrice}€</span>
         </div>
         </div>
     )
